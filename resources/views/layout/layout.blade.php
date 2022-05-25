@@ -59,5 +59,10 @@ nav {
   </div>
 </nav>
 
+@section('konten')
+
+@show
+
+
 </body>
 </html>

@@ -85,7 +85,12 @@
                 </div>
 
                 <div class="links">
+<<<<<<< Updated upstream
                     <a href="">Dashboard</a>
+=======
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="/dashboard/pengguna">Dashboard</a>
+>>>>>>> Stashed changes
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>

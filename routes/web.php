@@ -15,4 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< Updated upstream
 Route::get('/layout/layout','HomeController@index');
+=======
+
+Route::get('/dashboard/pengguna','HomeController@index');
+
+Route::get('dbmitra', 'DBMitraController@displaydb');
+
+>>>>>>> Stashed changes
