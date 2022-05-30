@@ -16,99 +16,207 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-    <link href="carousel.css" rel="stylesheet">
-
 </head>
 
 <body>
     <style>
-        .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+        .carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+}
 
-      .carousel-item {
-          background-color: #16C827;
-      }
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #16C827;
+    opacity: 0.7;
+}
+
+.carousel-caption {
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+  .content {
+    margin-top: 10em;
+    margin-bottom: 5em;
+
+  }
+
+  .btn {
+      background-color: #16C827;
+  }
+
+  .quick {
+      margin-top: 13em;
+  }
+
+  .hot {
+      margin-top: 7em;
+  }
+
+
     </style>
 
-
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{{url('/sampah.jpg')}}" class="d-block w-100" alt="sampah">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>TRASHURE</h5>
+          <p>Wujudkan lingkungan bersihmu bersama kami!</p>
 
-        <div class="container">
-          <div class="carousel-caption text-start d-flex-coloumn">
-            <h1>Memberikan layanan terbaik</h1>
-            <p>dengan pelayanan yang baik akan membuat lingkungan menjadi lebih bersahabat</p>
+          <div class="slider-btn">
+              <a href="">
+                  <button class="btn btn-success fw-bold">Learn More</button>
+              </a>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{url('/sampah2.jpg')}}" class="d-block w-100" alt="sampah">
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Menjaga kebersihan dimanapun dan kapanpun</h1>
-            <p>Pantau kebersihan lingkungan anda hanya dengan jangkauan tangan dan bebas dimana saja</p>
-
-          </div>
+        <img src="{{url('/sampah2.jpg')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Anda senang, kami tenang</h5>
+          <p>Bingung mau buang sampah tapi dilanda rasa malas?</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{url('/sampah3')}}.jpg"; class="d-block w-100" alt="sampah">
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Tetap jaga kebersihan lingkungan dengan Trashure</h1>
-            <p>Sahabat lingkungan anda, dimanapun dan kapanpun</p>
-          </div>
+        <img src="{{url('/sampah3.jpg')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p>TRASHURE, hadirkan lingkungan bersih impian anda!</p>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+<!-- Content -->
+<div class="container content">
+
+  <!-- konten row 1 -->
+  <div class="row align-items-center">
+    <div class="col-4">
+      <p class="fw-normal" style="margin-bottom: 20px">TRASHURE</p>
+      <h2 class="mb-4 fw-semibold">Tak perlu bingung <br>dengan sampah<br>di lingkungan anda</h2>
+      <hr>
+      <a href="#" class="btn fw-semibold mt-4">Start Now!</a>
+    </div>
+    <div class="col-8 d-flex justify-content-end">
+      <img src="{{url('/orangduduk.png')}}" alt="orang duduk" style="width: 300px;">
+    </div>
+  </div>
+
+  <!-- kata quick menu -->
+  <div class="row">
+    <h5 class="fw-bold quick">Quick Menu</h5>
+  </div>
+
+
+  <!-- konten row 2 -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{{url('/truksampah.png')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Trash Pickup</h5>
+                <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{{url('/truksampah.png')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Trash Pickup</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- kata hot news -->
+  <div class="row">
+    <h5 class="fw-bold hot">Hot News</h5>
+  </div>
+
+  <!-- konten row 3 -->
+  <div class="row">
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
 </body>
 </html>
 @endsection
